@@ -1,0 +1,17 @@
+<h1>Formulaire Livre</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enregistrer</button>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dateInput = document.getElementById('published_date');
+        var today = new Date();
+        var maxDate = today.toISOString().split('T')[0];
+        var minDate = new Date(today.setDate(today.getDate() - 30)).toISOString().split('T')[0];
+        dateInput.setAttribute('max', maxDate);
+        dateInput.setAttribute('min', minDate);
+    });
+</script>

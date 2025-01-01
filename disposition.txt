@@ -1,0 +1,33 @@
+myproject/
+│
+├── myproject/              # Répertoire principal du projet
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+│
+├── myapp/                  # Application Django
+│   ├── migrations/
+│   ├── templates/          # Templates HTML de l'application
+│   │   └── myapp/          # Namespace pour l'application
+│   │       ├── book_list.html
+│   │       ├── book_detail.html
+│   │       ├── book_form.html
+│   │       └── book_confirm_delete.html
+│   ├── static/             # Fichiers statiques
+│   │   └── myapp/          # Namespace pour les fichiers statiques
+│   │       ├── css/
+│   │       │   └── styles.css
+│   │       ├── js/
+│   │       │   └── scripts.js
+│   │       └── images/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   ├── forms.py
+│   └── urls.py
+│
+├── manage.py               # Script principal de gestion
+└── db.sqlite3              # Base de données SQLite (ou autre)
